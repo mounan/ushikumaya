@@ -186,7 +186,7 @@ const BannerSlider = () => {
               Book Now on Airbnb
             </motion.a>
             <motion.a
-              href="/ushikumaya/area"
+              href="/area"
               className="btn btn-secondary btn-large"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
