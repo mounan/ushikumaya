@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Noto Sans JP', system-ui, sans-serif;
+    @apply text-gray-900 bg-white antialiased;
+  }
+  
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-bamboo-500 text-white hover:bg-bamboo-600 focus:ring-bamboo-500 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-bamboo-500 border-2 border-bamboo-500 hover:bg-bamboo-500 hover:text-white focus:ring-bamboo-500;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent text-bamboo-500 border-2 border-bamboo-500 hover:bg-bamboo-500 hover:text-white focus:ring-bamboo-500;
+  }
+  
+  .btn-large {
+    @apply px-8 py-4 text-lg;
+  }
+  
+  .btn-small {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+  }
+  
+  .card-image {
+    @apply w-full h-64 object-cover rounded-t-xl;
+  }
+  
+  .card-content {
+    @apply p-6;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-bamboo-100 text-bamboo-800;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-bamboo-600 to-bamboo-400 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/20 backdrop-blur-sm border border-white/30;
+  }
+  
+  .page-header {
+    @apply bg-gradient-to-br from-bamboo-50 to-bamboo-100 py-16 md:py-20;
+  }
+  
+  .page-title {
+    @apply text-4xl md:text-5xl font-bold text-bamboo-800 mb-4;
+  }
+  
+  .page-description {
+    @apply text-xl text-bamboo-600 max-w-3xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  }
+  
+  .bg-overlay {
+    background: linear-gradient(45deg, rgba(74, 124, 89, 0.3) 0%, rgba(45, 82, 53, 0.4) 50%, rgba(74, 124, 89, 0.3) 100%);
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Loading spinner */
+.spinner {
+  @apply w-8 h-8 border-4 border-bamboo-200 border-t-bamboo-500 rounded-full animate-spin;
+}
