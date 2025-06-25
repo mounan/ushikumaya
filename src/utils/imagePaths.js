@@ -11,9 +11,13 @@ const getImagePath = (imagePath) => {
     cleanPath = cleanPath.replace('ushikumaya/', '');
   }
   
-  // Use Vite's BASE_URL for consistent path handling in both dev and production
-  // This automatically handles the /ushikumaya/ prefix for GitHub Pages
-  return `${import.meta.env.BASE_URL}${cleanPath}`;
+  // In development, Vite serves public files at the root despite base config
+  // In production, use the configured base path
+  if (import.meta.env.DEV) {
+    return `/${cleanPath}`;
+  } else {
+    return `${import.meta.env.BASE_URL}${cleanPath}`;
+  }
 };
 
 export default getImagePath; 
