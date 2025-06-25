@@ -1,4 +1,5 @@
 // Utility function to get the correct image path for both development and production
+// Updated for GitHub Pages deployment
 const getImagePath = (imagePath) => {
   // Remove leading slash if present
   let cleanPath = imagePath;
