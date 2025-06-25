@@ -1,39 +1,40 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react'
+import getImagePath from '../utils/imagePaths'
 
 const slides = [
   {
     id: 1,
-    image: '/ushikumaya/assets/images/countryside/bamboos_compressed.jpg',
+    image: getImagePath('assets/images/countryside/bamboos_compressed.jpg'),
     title: 'Traditional Bamboo Hideaway',
     description: 'Peaceful retreat surrounded by natural bamboo groves',
     alt: 'Beautiful bamboo grove surrounding Ushikumaya traditional hideaway'
   },
   {
     id: 2,
-    image: '/ushikumaya/assets/images/house/tatami_room_compressed.jpg',
+    image: getImagePath('assets/images/house/tatami_room_compressed.jpg'),
     title: 'Authentic Tatami Rooms',
     description: 'Traditional Japanese living with modern comfort for 6 guests',
     alt: 'Traditional Japanese tatami room with authentic design'
   },
   {
     id: 3,
-    image: '/ushikumaya/assets/images/bbq/bbq_1_compressed.jpg',
+    image: getImagePath('assets/images/bbq/bbq_1_compressed.jpg'),
     title: 'Free BBQ Equipment',
     description: 'Complete outdoor grilling setup in beautiful garden',
     alt: 'Outdoor BBQ setup with equipment in garden setting'
   },
   {
     id: 4,
-    image: '/ushikumaya/assets/images/countryside/sunflower_compressed.jpg',
+    image: getImagePath('assets/images/countryside/sunflower_compressed.jpg'),
     title: 'Beautiful Countryside',
     description: 'Stunning seasonal landscapes and natural beauty',
     alt: 'Vibrant sunflower fields in the countryside around Ushikumaya'
   },
   {
     id: 5,
-    image: '/ushikumaya/assets/images/house/parking_lots_compressed.jpg',
+    image: getImagePath('assets/images/house/parking_lots_compressed.jpg'),
     title: 'Free Parking for 6 Cars',
     description: 'Convenient access with spacious covered parking',
     alt: 'Free parking facilities with space for multiple vehicles'

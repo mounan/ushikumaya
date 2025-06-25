@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
+import getImagePath from '../utils/imagePaths'
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -17,32 +18,32 @@ const Gallery = () => {
 
   const images = [
     // House category
-    { src: '/ushikumaya/assets/images/house/tatami_room_compressed.jpg', category: 'house', title: 'Traditional Tatami Room', description: 'Authentic Japanese living space' },
-    { src: '/ushikumaya/assets/images/house/not_tatami_room_compressed.jpg', category: 'house', title: 'Modern Living Area', description: 'Contemporary comfort' },
-    { src: '/ushikumaya/assets/images/house/corridor_gallery.jpg', category: 'house', title: 'Traditional Corridor', description: 'Authentic Japanese architecture' },
-    { src: '/ushikumaya/assets/images/house/parking_lots_compressed.jpg', category: 'house', title: 'Free Parking', description: 'Space for 6 vehicles' },
-    { src: '/ushikumaya/assets/images/house/face_washing_gallery.jpg', category: 'house', title: 'Bathroom Facilities', description: 'Modern amenities in traditional setting' },
-    { src: '/ushikumaya/assets/images/house/toilet_gallery.jpg', category: 'house', title: 'Japanese Style Facilities', description: 'Traditional Japanese convenience' },
+    { src: getImagePath('assets/images/house/tatami_room_compressed.jpg'), category: 'house', title: 'Traditional Tatami Room', description: 'Authentic Japanese living space' },
+    { src: getImagePath('assets/images/house/not_tatami_room_compressed.jpg'), category: 'house', title: 'Modern Living Area', description: 'Contemporary comfort' },
+    { src: getImagePath('assets/images/house/corridor_gallery.jpg'), category: 'house', title: 'Traditional Corridor', description: 'Authentic Japanese architecture' },
+    { src: getImagePath('assets/images/house/parking_lots_compressed.jpg'), category: 'house', title: 'Free Parking', description: 'Space for 6 vehicles' },
+    { src: getImagePath('assets/images/house/face_washing_gallery.jpg'), category: 'house', title: 'Bathroom Facilities', description: 'Modern amenities in traditional setting' },
+    { src: getImagePath('assets/images/house/toilet_gallery.jpg'), category: 'house', title: 'Japanese Style Facilities', description: 'Traditional Japanese convenience' },
     
     // Countryside category
-    { src: '/ushikumaya/assets/images/countryside/bamboos_compressed.jpg', category: 'countryside', title: 'Bamboo Forest', description: 'Peaceful groves all around' },
-    { src: '/ushikumaya/assets/images/countryside/sakura_gallery.jpg', category: 'countryside', title: 'Cherry Blossoms', description: 'Beautiful spring views' },
-    { src: '/ushikumaya/assets/images/countryside/sunflower_compressed.jpg', category: 'countryside', title: 'Summer Sunflowers', description: 'Vibrant countryside blooms' },
-    { src: '/ushikumaya/assets/images/countryside/fall_fields_gallery.jpg', category: 'countryside', title: 'Autumn Fields', description: 'Golden autumn countryside' },
+    { src: getImagePath('assets/images/countryside/bamboos_compressed.jpg'), category: 'countryside', title: 'Bamboo Forest', description: 'Peaceful groves all around' },
+    { src: getImagePath('assets/images/countryside/sakura_gallery.jpg'), category: 'countryside', title: 'Cherry Blossoms', description: 'Beautiful spring views' },
+    { src: getImagePath('assets/images/countryside/sunflower_compressed.jpg'), category: 'countryside', title: 'Summer Sunflowers', description: 'Vibrant countryside blooms' },
+    { src: getImagePath('assets/images/countryside/fall_fields_gallery.jpg'), category: 'countryside', title: 'Autumn Fields', description: 'Golden autumn countryside' },
     
     // BBQ category
-    { src: '/ushikumaya/assets/images/bbq/bbq_1_compressed.jpg', category: 'bbq', title: 'BBQ Setup', description: 'Complete grilling equipment' },
-    { src: '/ushikumaya/assets/images/bbq/bbq_2_compressed.jpg', category: 'bbq', title: 'Outdoor Dining', description: 'Perfect for group meals' },
+    { src: getImagePath('assets/images/bbq/bbq_1_compressed.jpg'), category: 'bbq', title: 'BBQ Setup', description: 'Complete grilling equipment' },
+    { src: getImagePath('assets/images/bbq/bbq_2_compressed.jpg'), category: 'bbq', title: 'Outdoor Dining', description: 'Perfect for group meals' },
     
     // Starry night category
-    { src: '/ushikumaya/assets/images/starynight/stary_gallery.jpg', category: 'starynight', title: 'Starry Night Sky', description: 'Perfect for stargazing' },
-    { src: '/ushikumaya/assets/images/starynight/7_stars_gallery.jpg', category: 'starynight', title: 'Seven Stars', description: 'Clear constellation views' },
-    { src: '/ushikumaya/assets/images/starynight/moon_gallery.jpg', category: 'starynight', title: 'Moonlit Nights', description: 'Peaceful lunar observations' },
+    { src: getImagePath('assets/images/starynight/stary_gallery.jpg'), category: 'starynight', title: 'Starry Night Sky', description: 'Perfect for stargazing' },
+    { src: getImagePath('assets/images/starynight/7_stars_gallery.jpg'), category: 'starynight', title: 'Seven Stars', description: 'Clear constellation views' },
+    { src: getImagePath('assets/images/starynight/moon_gallery.jpg'), category: 'starynight', title: 'Moonlit Nights', description: 'Peaceful lunar observations' },
     
     // Winter category
-    { src: '/ushikumaya/assets/images/winter/winter_snow_gallery.jpg', category: 'winter', title: 'Winter Snow', description: 'Magical winter landscape' },
-    { src: '/ushikumaya/assets/images/winter/ice_compressed.jpg', category: 'winter', title: 'Ice Formations', description: 'Natural winter art' },
-    { src: '/ushikumaya/assets/images/winter/winter_wall_gallery.jpg', category: 'winter', title: 'Winter Wall', description: 'Traditional architecture in winter' },
+    { src: getImagePath('assets/images/winter/winter_snow_gallery.jpg'), category: 'winter', title: 'Winter Snow', description: 'Magical winter landscape' },
+    { src: getImagePath('assets/images/winter/ice_compressed.jpg'), category: 'winter', title: 'Ice Formations', description: 'Natural winter art' },
+    { src: getImagePath('assets/images/winter/winter_wall_gallery.jpg'), category: 'winter', title: 'Winter Wall', description: 'Traditional architecture in winter' },
   ]
 
   const filteredImages = selectedCategory === 'all' 

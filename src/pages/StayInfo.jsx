@@ -1,29 +1,30 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Users, Home, Flame, PawPrint, Car, Star } from 'lucide-react'
+import getImagePath from '../utils/imagePaths'
 
 const StayInfo = () => {
   const galleryImages = [
     {
-      src: '/ushikumaya/assets/images/house/tatami_room_compressed.jpg',
+      src: getImagePath('assets/images/house/tatami_room_compressed.jpg'),
       alt: 'Traditional Japanese tatami room with authentic design',
       title: 'Traditional Tatami Room',
       description: 'Authentic Japanese living space with tatami mats'
     },
     {
-      src: '/ushikumaya/assets/images/house/not_tatami_room_compressed.jpg',
+      src: getImagePath('assets/images/house/not_tatami_room_compressed.jpg'),
       alt: 'Modern living area with contemporary amenities',
       title: 'Modern Living Area',
       description: 'Contemporary comfort meets traditional design'
     },
     {
-      src: '/ushikumaya/assets/images/bbq/bbq_1_compressed.jpg',
+      src: getImagePath('assets/images/bbq/bbq_1_compressed.jpg'),
       alt: 'Complete BBQ setup with grilling equipment',
       title: 'Free BBQ Equipment',
       description: 'Complete grilling setup included during campaign'
     },
     {
-      src: '/ushikumaya/assets/images/house/parking_lots_compressed.jpg',
+      src: getImagePath('assets/images/house/parking_lots_compressed.jpg'),
       alt: 'Free parking space for up to 6 vehicles',
       title: 'Free Parking',
       description: 'Space for up to 6 vehicles with covered areas'
@@ -237,7 +238,7 @@ const StayInfo = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="/ushikumaya/assets/images/house/tatami_2_compressed.jpg"
+                  src={getImagePath('assets/images/house/tatami_2_compressed.jpg')}
                   alt="Traditional tatami room interior"
                   className="w-full h-80 object-cover"
                 />

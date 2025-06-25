@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Car, Flame, Plane, TreePine, MapPin, Star } from 'lucide-react'
 import BannerSlider from '../components/BannerSlider'
+import getImagePath from '../utils/imagePaths'
 
 const Home = () => {
   const features = [
@@ -55,7 +56,7 @@ const Home = () => {
       ],
       link: '/stay',
       linkText: 'Learn More',
-      image: '/ushikumaya/assets/images/house/tatami_room_compressed.jpg'
+      image: getImagePath('assets/images/house/tatami_room_compressed.jpg')
     },
     {
       title: 'Activities',
@@ -67,7 +68,7 @@ const Home = () => {
       ],
       link: '/area',
       linkText: 'Explore Area',
-      image: '/ushikumaya/assets/images/countryside/sunflower_compressed.jpg'
+      image: getImagePath('assets/images/countryside/sunflower_compressed.jpg')
     },
     {
       title: 'Transport',
@@ -79,7 +80,7 @@ const Home = () => {
       ],
       link: '/access',
       linkText: 'Access Info',
-      image: '/ushikumaya/assets/images/house/parking_lots_compressed.jpg'
+      image: getImagePath('assets/images/house/parking_lots_compressed.jpg')
     }
   ]
 
