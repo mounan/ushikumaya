@@ -11,13 +11,9 @@ const getImagePath = (imagePath) => {
     cleanPath = cleanPath.replace('ushikumaya/', '');
   }
   
-  // In development, Vite serves public files at the root despite base config
-  // In production, use the configured base path
-  if (import.meta.env.DEV) {
-    return `/${cleanPath}`;
-  } else {
-    return `${import.meta.env.BASE_URL}${cleanPath}`;
-  }
+  // Always use BASE_URL for consistent path handling
+  // Vite handles this correctly in both dev and production
+  return `${import.meta.env.BASE_URL}${cleanPath}`;
 };
 
 export default getImagePath; 
