@@ -1,20 +1,15 @@
-// Utility function to get the correct image path for both development and production
-// Updated for GitHub Pages deployment
+// Simple utility function to get the correct image path
 const getImagePath = (imagePath) => {
-  // Remove leading slash if present
-  let cleanPath = imagePath;
-  if (cleanPath.startsWith('/')) {
-    cleanPath = cleanPath.slice(1);
+  // Clean the path by removing leading slash
+  const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath;
+  
+  // In development, use root path
+  if (import.meta.env.DEV) {
+    return `/${cleanPath}`;
   }
   
-  // Remove base path if already present to avoid duplication
-  if (cleanPath.startsWith('ushikumaya/')) {
-    cleanPath = cleanPath.replace('ushikumaya/', '');
-  }
-  
-  // Always use BASE_URL for consistent path handling
-  // Vite handles this correctly in both dev and production
-  return `${import.meta.env.BASE_URL}${cleanPath}`;
+  // In production, use the base path for GitHub Pages
+  return `/ushikumaya/${cleanPath}`;
 };
 
 export default getImagePath; 
