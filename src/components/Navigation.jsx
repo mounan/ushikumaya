@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Home, Building, Map, Camera, Car, HelpCircle, Phone } from 'lucide-react'
+import { useTranslation } from '../hooks/useTranslation'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
+  const { t } = useTranslation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,13 +24,13 @@ const Navigation = () => {
   }, [location])
 
   const navItems = [
-    { path: '/', label: 'Home', icon: Home },
-    { path: '/stay', label: 'Stay Info', icon: Building },
-    { path: '/area', label: 'Area Guide', icon: Map },
-    { path: '/gallery', label: 'Gallery', icon: Camera },
-    { path: '/access', label: 'Access', icon: Car },
-    { path: '/faq', label: 'FAQ', icon: HelpCircle },
-    { path: '/contact', label: 'Contact', icon: Phone },
+    { path: '/', label: t('nav.home'), icon: Home },
+    { path: '/stay', label: t('nav.stay'), icon: Building },
+    { path: '/area', label: t('nav.area'), icon: Map },
+    { path: '/gallery', label: t('nav.gallery'), icon: Camera },
+    { path: '/access', label: t('nav.access'), icon: Car },
+    { path: '/faq', label: t('nav.faq'), icon: HelpCircle },
+    { path: '/contact', label: t('nav.contact'), icon: Phone },
   ]
 
   return (
@@ -55,7 +58,7 @@ const Navigation = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-6">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
@@ -77,6 +80,8 @@ const Navigation = () => {
                 </Link>
               ))}
               
+              <LanguageSwitcher className="!bg-bamboo-100/50 !border-bamboo-200 !text-bamboo-700 hover:!bg-bamboo-200" />
+              
               <motion.a
                 href="https://www.airbnb.jp/rooms/48761201"
                 target="_blank"
@@ -85,7 +90,7 @@ const Navigation = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Book Now
+                {t('common.bookNow')}
               </motion.a>
             </div>
 
@@ -129,6 +134,10 @@ const Navigation = () => {
                     )
                   })}
                   
+                  <div className="flex justify-center mt-4">
+                    <LanguageSwitcher />
+                  </div>
+                  
                   <motion.a
                     href="https://www.airbnb.jp/rooms/48761201"
                     target="_blank"
@@ -136,16 +145,16 @@ const Navigation = () => {
                     className="btn btn-primary w-full mt-4"
                     whileTap={{ scale: 0.98 }}
                   >
-                    📅 Book on Airbnb
+                    📅 {t('common.bookNow')}
                   </motion.a>
                 </div>
                 
                 <div className="mt-6 pt-4 border-t border-bamboo-100 text-center">
-                  <p className="text-sm text-bamboo-600 font-medium">Traditional Japanese Bamboo Hideaway</p>
+                  <p className="text-sm text-bamboo-600 font-medium">{t('home.subtitle')}</p>
                   <div className="flex justify-center space-x-4 mt-2 text-xs text-bamboo-500">
-                    <span>21min from Narita</span>
-                    <span>7min to Golf</span>
-                    <span>21min to Beach</span>
+                    <span>{t('home.badges.narita')}</span>
+                    <span>{t('home.badges.golf')}</span>
+                    <span>{t('home.badges.beach')}</span>
                   </div>
                 </div>
               </div>
