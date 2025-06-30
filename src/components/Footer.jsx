@@ -12,7 +12,6 @@ const Footer = () => {
     { to: '/area', label: 'Area Guide' },
     { to: '/gallery', label: 'Gallery' },
     { to: '/access', label: 'Access' },
-    { to: '/faq', label: 'FAQ' },
     { to: '/contact', label: 'Contact' },
   ]
 

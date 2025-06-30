@@ -10,7 +10,6 @@ import StayInfo from './pages/StayInfo'
 import AreaGuide from './pages/AreaGuide'
 import Gallery from './pages/Gallery'
 import Access from './pages/Access'
-import FAQ from './pages/FAQ'
 import Contact from './pages/Contact'
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
               <Route path="/area" element={<AreaGuide />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/access" element={<Access />} />
-              <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </AnimatePresence>

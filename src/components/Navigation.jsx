@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Home, Building, Map, Camera, Car, HelpCircle, Phone } from 'lucide-react'
+import { Menu, X, Home, Building, Map, Camera, Car, Phone } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
 import LanguageSwitcher from './LanguageSwitcher'
 
@@ -29,7 +29,6 @@ const Navigation = () => {
     { path: '/area', label: t('nav.area'), icon: Map },
     { path: '/gallery', label: t('nav.gallery'), icon: Camera },
     { path: '/access', label: t('nav.access'), icon: Car },
-    { path: '/faq', label: t('nav.faq'), icon: HelpCircle },
     { path: '/contact', label: t('nav.contact'), icon: Phone },
   ]
 
