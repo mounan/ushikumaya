@@ -136,7 +136,7 @@ const Home = () => {
                 <motion.div
                   key={feature.title}
                   variants={itemVariants}
-                  whileHover={{ y: -8, scale: 1.02 }}
+                  whileHover={{ y: -4 }}
                   className="card group cursor-pointer"
                 >
                   <div className="card-content text-center">
@@ -168,14 +168,14 @@ const Home = () => {
               <motion.div
                 key={card.title}
                 variants={itemVariants}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -4 }}
                 className="card overflow-hidden group"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white">

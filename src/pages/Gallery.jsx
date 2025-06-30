@@ -117,11 +117,11 @@ const Gallery = () => {
                 <motion.div
                   key={image.src}
                   layout
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -4 }}
                   className="card overflow-hidden group cursor-pointer"
                   onClick={() => setLightboxImage(image)}
                 >
@@ -129,7 +129,7 @@ const Gallery = () => {
                     <img
                       src={image.src}
                       alt={image.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">

@@ -144,14 +144,14 @@ const AreaGuide = () => {
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -4 }}
                   className="card overflow-hidden group"
                 >
                   <div className="relative h-64 overflow-hidden">
                     <img
                       src={attraction.image}
                       alt={attraction.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                     <div className="absolute top-4 right-4">
@@ -284,7 +284,7 @@ const AreaGuide = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -4 }}
                 className="card text-center group"
               >
                 <div className="card-content">
