@@ -6,38 +6,38 @@ import getImagePath from '../utils/imagePaths'
 const slides = [
   {
     id: 1,
-    image: getImagePath('assets/images/countryside/bamboos_compressed.jpg'),
+    image: getImagePath('assets/images/pages/home/banner/bamboo_grove.jpg'),
     title: 'Traditional Bamboo Hideaway',
     description: 'Peaceful retreat surrounded by natural bamboo groves',
     alt: 'Beautiful bamboo grove surrounding Ushikumaya traditional hideaway'
   },
   {
     id: 2,
-    image: getImagePath('assets/images/house/tatami_room_compressed.jpg'),
-    title: 'Authentic Tatami Rooms',
+    image: getImagePath('assets/images/pages/home/banner/sun_room.jpg'),
+    title: 'Authentic Rooms with Modern Comfort',
     description: 'Traditional Japanese living with modern comfort for 6 guests',
-    alt: 'Traditional Japanese tatami room with authentic design'
+    alt: 'Traditional Japanese room with authentic design'
   },
   {
     id: 3,
-    image: getImagePath('assets/images/bbq/bbq_1_compressed.jpg'),
-    title: 'Free BBQ Equipment',
-    description: 'Complete outdoor grilling setup in beautiful garden',
-    alt: 'Outdoor BBQ setup with equipment in garden setting'
+    image: getImagePath('assets/images/pages/home/banner/field_2.jpg'),
+    title: 'Beautiful Countryside',
+    description: 'Stunning seasonal landscapes and natural beauty',
+    alt: 'Beautiful countryside with seasonal landscapes'
   },
   {
     id: 4,
-    image: getImagePath('assets/images/countryside/sunflower_compressed.jpg'),
+    image: getImagePath('assets/images/pages/home/banner/field_1.jpg'),
     title: 'Beautiful Countryside',
     description: 'Stunning seasonal landscapes and natural beauty',
-    alt: 'Vibrant sunflower fields in the countryside around Ushikumaya'
+    alt: 'Beautiful countryside with seasonal landscapes'
   },
   {
     id: 5,
-    image: getImagePath('assets/images/house/parking_lots_compressed.jpg'),
-    title: 'Free Parking for 6 Cars',
-    description: 'Convenient access with spacious covered parking',
-    alt: 'Free parking facilities with space for multiple vehicles'
+    image: getImagePath('assets/images/pages/home/banner/rainbow.jpg'),
+    title: 'Beautiful Rainbow',
+    description: 'Stunning rainbow in the sky',
+    alt: 'Beautiful rainbow in the sky'
   }
 ]
 

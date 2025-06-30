@@ -56,7 +56,7 @@ const Home = () => {
       ],
       link: '/stay',
       linkText: 'Learn More',
-      image: getImagePath('assets/images/house/tatami_room_compressed.jpg')
+      image: getImagePath('assets/images/pages/home/cards/accommodation.jpg')
     },
     {
       title: 'Activities',
@@ -68,7 +68,7 @@ const Home = () => {
       ],
       link: '/area',
       linkText: 'Explore Area',
-      image: getImagePath('assets/images/countryside/sunflower_compressed.jpg')
+      image: getImagePath('assets/images/pages/home/cards/activities.jpg')
     },
     {
       title: 'Transport',
@@ -80,7 +80,7 @@ const Home = () => {
       ],
       link: '/access',
       linkText: 'Access Info',
-      image: getImagePath('assets/images/house/parking_lots_compressed.jpg')
+      image: getImagePath('assets/images/pages/home/cards/transport.jpg')
     }
   ]
 

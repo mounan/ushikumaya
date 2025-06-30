@@ -16,7 +16,7 @@ const AreaGuide = () => {
         'Golf bag shuttle service available',
         'Equipment rental on-site'
       ],
-      image: getImagePath('assets/images/countryside/sakura_compressed.jpg'),
+      image: getImagePath('assets/images/pages/area/attractions/golf_courses.jpg'),
       color: 'from-green-500 to-green-600'
     },
     {
@@ -30,7 +30,7 @@ const AreaGuide = () => {
         'Beach volleyball courts',
         'Seaside restaurants and cafes'
       ],
-      image: getImagePath('assets/images/countryside/sunflower_compressed.jpg'),
+      image: getImagePath('assets/images/pages/area/attractions/kujukuri_beach.jpg'),
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -44,7 +44,7 @@ const AreaGuide = () => {
         'Kids play areas',
         'All-weather facility'
       ],
-      image: getImagePath('assets/images/winter/winter_snow_compressed.jpg'),
+      image: getImagePath('assets/images/pages/area/attractions/water_park.jpg'),
       color: 'from-purple-500 to-pink-500'
     },
     {
@@ -58,7 +58,7 @@ const AreaGuide = () => {
         'All-you-can-eat options',
         'Perfect for families'
       ],
-      image: getImagePath('assets/images/countryside/bamboos_compressed.jpg'),
+      image: getImagePath('assets/images/pages/area/attractions/strawberry_picking.jpg'),
       color: 'from-red-500 to-pink-500'
     }
   ]
