@@ -187,32 +187,6 @@ const StayInfo = () => {
       </section>
 
 
-      {/* CTA Section */}
-      <section className="section-padding bg-gradient-bamboo text-white">
-        <div className="container text-center">
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6">Ready to Book Your Stay?</h2>
-            <p className="text-xl mb-10 max-w-2xl mx-auto opacity-90">
-              Experience traditional Japanese hospitality with modern comfort in our bamboo hideaway
-            </p>
-            <motion.a
-              href="https://www.airbnb.jp/rooms/48761201"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn bg-white text-bamboo-600 hover:bg-gray-100 btn-large"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Check Availability on Airbnb
-            </motion.a>
-          </motion.div>
-        </div>
-      </section>
     </motion.div>
   )
 }

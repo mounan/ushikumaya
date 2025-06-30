@@ -206,37 +206,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-gradient-bamboo text-white">
-        <div className="container text-center">
-          <motion.div variants={itemVariants}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Experience Ushikumaya?
-            </h2>
-            <p className="text-xl mb-10 max-w-2xl mx-auto opacity-90">
-              Book your stay at our traditional bamboo hideaway and create unforgettable memories
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.a
-                href="https://www.airbnb.jp/rooms/48761201"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn bg-white text-bamboo-600 hover:bg-gray-100 btn-large"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Book on Airbnb
-              </motion.a>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link to="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-bamboo-600 btn-large">
-                  Contact Us
-                </Link>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </motion.div>
   )
 }
