@@ -197,24 +197,6 @@ const BannerSlider = () => {
         </div>
       </div>
 
-      {/* Slide content (bottom corner) */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={`slide-content-${currentSlide}`}
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -50, opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="absolute bottom-8 left-8 z-20 max-w-md text-white"
-        >
-          <h3 className="text-2xl font-semibold mb-2 text-shadow">
-            {slides[currentSlide].title}
-          </h3>
-          <p className="text-lg opacity-90 text-shadow">
-            {slides[currentSlide].description}
-          </p>
-        </motion.div>
-      </AnimatePresence>
 
       {/* Navigation arrows */}
       <button
