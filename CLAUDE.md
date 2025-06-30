@@ -19,14 +19,12 @@
 - **Tailwind CSS** - Utility-first CSS framework
 - **Framer Motion** - Advanced animations and transitions
 - **Lucide React** - Modern icon library
-- **GitHub Pages** - Automated deployment via GitHub Actions
+- **Vercel** - Modern deployment platform with edge network
 
 ## Project Structure
 
 ```
 ushikumaya/
-├── .github/workflows/     # GitHub Actions deployment
-│   └── deploy.yml
 ├── public/               # Static assets
 │   └── assets/images/    # Property photos (preserved from Jekyll)
 ├── src/
@@ -48,7 +46,8 @@ ushikumaya/
 │   └── index.css        # Global styles
 ├── package.json         # Dependencies and scripts
 ├── vite.config.js       # Vite configuration
-└── tailwind.config.js   # Tailwind CSS configuration
+├── tailwind.config.js   # Tailwind CSS configuration
+└── vercel.json          # Vercel deployment configuration
 ```
 
 ## Property Information
@@ -165,22 +164,33 @@ npm run dev
 # Build for production
 npm run build
 
-# Deploy to GitHub Pages
-npm run deploy
+# Preview production build
+npm run preview
+
+# Deploy to Vercel
+vercel --prod
 ```
 
 ## Deployment
 
-### GitHub Pages Setup
-- Automated deployment via GitHub Actions
-- Triggers on push to main branch
-- Builds React app and deploys to gh-pages branch
-- Site URL: `https://[username].github.io/ushikumaya/`
+### Vercel Setup
+- Modern deployment platform with global edge network
+- Automatic deployments on push to main branch
+- Preview deployments for pull requests
+- Instant rollbacks and zero-downtime deployments
 
 ### Build Configuration
-- Vite configured with base path for GitHub Pages
-- Optimized chunking and code splitting
-- Asset optimization for fast loading
+- Vite configured for optimal production builds
+- Automatic code splitting and lazy loading
+- Asset optimization and compression
+- SPA routing support with vercel.json configuration
+
+### Deployment Features
+- Automatic HTTPS with SSL certificates
+- Global CDN for fast content delivery
+- Built-in analytics and performance monitoring
+- Environment variables support
+- Custom domains and subdomains
 
 ## Design System
 

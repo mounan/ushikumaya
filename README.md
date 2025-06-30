@@ -19,7 +19,7 @@ A modern React website for Ushikumaya, a traditional Japanese Airbnb villa in Yo
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
-- **Deployment**: GitHub Pages
+- **Deployment**: Vercel
 
 ## 📱 Pages
 
@@ -51,17 +51,25 @@ npm run dev
 # Build for production
 npm run build
 
-# Deploy to GitHub Pages
-npm run deploy
+# Preview production build locally
+npm run preview
+
+# Deploy to Vercel
+vercel --prod
 ```
 
 ## 📦 Deployment
 
-The site automatically deploys to GitHub Pages when changes are pushed to the main branch using GitHub Actions.
+The site is deployed on Vercel for optimal performance and easy deployment workflow.
 
-- **Live Site**: Will be available at `https://[username].github.io/ushikumaya/`
-- **Build Process**: Automated via GitHub Actions
-- **CDN**: Served via GitHub Pages CDN
+- **Live Site**: Deployed on Vercel with automatic deployments
+- **Build Process**: Automatic builds on push to main branch
+- **CDN**: Global edge network via Vercel
+- **Features**: 
+  - Instant deployments
+  - Preview deployments for PRs
+  - Automatic HTTPS
+  - Optimized for performance
 
 ## 🏞 Property Details
 
