@@ -154,16 +154,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Assets - Keep original large images out of repo
-assets/images/
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.bmp
-*.tiff
-*.webp
-
 # But keep compressed/optimized images for web
 !public/assets/images/*_compressed.jpg
 !public/assets/images/*_gallery.jpg

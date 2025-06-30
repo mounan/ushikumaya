@@ -11,8 +11,7 @@ public/assets/images/
 │   │   ├── banner/          # Banner slider images (5 images)
 │   │   └── cards/           # Info card images (3 images)
 │   ├── stay/
-│   │   ├── gallery/         # Property showcase images (4 images)
-│   │   └── features/        # Feature section images (1 image)
+│   │   └── gallery/         # Property showcase images (6 images)
 │   ├── area/
 │   │   └── attractions/     # Local attraction images (4 images)
 │   └── gallery/             # Full gallery page images (23 images)
@@ -42,14 +41,14 @@ public/assets/images/
 
 ### Stay Info Page (`/stay`)
 
-#### Gallery Showcase
-- `pages/stay/gallery/tatami_room.jpg` - Traditional room
-- `pages/stay/gallery/modern_room.jpg` - Modern living area
-- `pages/stay/gallery/bbq_equipment.jpg` - BBQ setup
-- `pages/stay/gallery/parking.jpg` - Parking space
+#### Gallery Showcase (6 image cards)
+- `pages/stay/gallery/tatami_room.jpg` - Traditional tatami room
+- `pages/stay/gallery/bbq_equipment.jpg` - Free BBQ equipment & coal
+- `pages/stay/gallery/parking.jpg` - Free parking
+- `pages/stay/gallery/pet_ok.jpg` - Pet-friendly accommodation
+- `pages/stay/gallery/starry_night.jpg` - Starry night views
+- `pages/stay/gallery/quiet_countryside.jpg` - Peaceful countryside
 
-#### Features Section
-- `pages/stay/features/traditional_tatami.jpg` - Traditional experience image
 
 ### Area Guide Page (`/area`)
 

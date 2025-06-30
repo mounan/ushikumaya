@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Users, Home, Flame, PawPrint, Car, Star } from 'lucide-react'
+import { Users, Home, Flame, PawPrint, Car, Star, Zap, TreePine } from 'lucide-react'
 import getImagePath from '../utils/imagePaths'
 
 const StayInfo = () => {
@@ -8,26 +8,38 @@ const StayInfo = () => {
     {
       src: getImagePath('assets/images/pages/stay/gallery/tatami_room.jpg'),
       alt: 'Traditional Japanese tatami room with authentic design',
-      title: 'Traditional Tatami Room',
+      title: 'Tatami Room',
       description: 'Authentic Japanese living space with tatami mats'
     },
     {
-      src: getImagePath('assets/images/pages/stay/gallery/modern_room.jpg'),
-      alt: 'Modern living area with contemporary amenities',
-      title: 'Modern Living Area',
-      description: 'Contemporary comfort meets traditional design'
-    },
-    {
       src: getImagePath('assets/images/pages/stay/gallery/bbq_equipment.jpg'),
-      alt: 'Complete BBQ setup with grilling equipment',
-      title: 'Free BBQ Equipment',
-      description: 'Complete grilling setup included during campaign'
+      alt: 'Complete BBQ setup with grilling equipment and coal',
+      title: 'Free BBQ Equipment & Coal',
+      description: 'Complete grilling setup with charcoal included during campaign'
     },
     {
       src: getImagePath('assets/images/pages/stay/gallery/parking.jpg'),
       alt: 'Free parking space for up to 6 vehicles',
       title: 'Free Parking',
       description: 'Space for up to 6 vehicles with covered areas'
+    },
+    {
+      src: getImagePath('assets/images/pages/stay/gallery/pet_ok.jpg'),
+      alt: 'Pet-friendly accommodation for small dogs',
+      title: 'Pet OK',
+      description: 'Small dogs welcome with cleaning fee'
+    },
+    {
+      src: getImagePath('assets/images/pages/stay/gallery/starry_night.jpg'),
+      alt: 'Beautiful starry night sky view',
+      title: 'Starry Night',
+      description: 'Perfect spot for stargazing away from city lights'
+    },
+    {
+      src: getImagePath('assets/images/pages/stay/gallery/quiet_countryside.jpg'),
+      alt: 'Peaceful countryside setting',
+      title: 'Quiet Countryside',
+      description: 'Tranquil rural setting surrounded by nature'
     }
   ]
 
@@ -49,12 +61,6 @@ const StayInfo = () => {
       title: 'BBQ Setup',
       description: 'Free equipment during campaign',
       details: ['Professional BBQ grill', 'Charcoal and lighter fluid', 'Grilling nets and utensils', 'Outdoor seating area']
-    },
-    {
-      icon: Star,
-      title: 'Stargazing',
-      description: 'Private bamboo grove corner',
-      details: ['Clear night sky views', 'Away from city lights', 'Comfortable seating', 'Perfect for astronomy']
     },
     {
       icon: PawPrint,
@@ -106,7 +112,7 @@ const StayInfo = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           >
             {galleryImages.map((image, index) => (
               <motion.div
@@ -180,74 +186,6 @@ const StayInfo = () => {
         </div>
       </section>
 
-      {/* Traditional Features */}
-      <section className="section-padding bg-gradient-to-br from-bamboo-50 to-white">
-        <div className="container">
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-bamboo-800 mb-6">Traditional Japanese Experience</h2>
-            <p className="text-xl text-bamboo-600 max-w-3xl mx-auto">
-              Immerse yourself in authentic Japanese culture while enjoying modern comfort and convenience
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-3xl font-bold text-bamboo-800 mb-6">What Makes Us Special</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-bamboo-500 rounded-full mt-2" />
-                  <div>
-                    <h4 className="text-lg font-semibold text-bamboo-700 mb-2">Authentic Tatami Rooms</h4>
-                    <p className="text-gray-600">Experience traditional Japanese living with comfortable tatami mat areas</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-bamboo-500 rounded-full mt-2" />
-                  <div>
-                    <h4 className="text-lg font-semibold text-bamboo-700 mb-2">Bamboo Grove Setting</h4>
-                    <p className="text-gray-600">Surrounded by peaceful bamboo forests for ultimate tranquility</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-bamboo-500 rounded-full mt-2" />
-                  <div>
-                    <h4 className="text-lg font-semibold text-bamboo-700 mb-2">Modern Conveniences</h4>
-                    <p className="text-gray-600">Traditional design enhanced with modern amenities for your comfort</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img
-                  src={getImagePath('assets/images/pages/stay/features/traditional_tatami.jpg')}
-                  alt="Traditional tatami room interior"
-                  className="w-full h-80 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-bamboo-900/20 to-transparent" />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-bamboo text-white">
